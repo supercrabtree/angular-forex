@@ -34,4 +34,4 @@ angular.module('myApp', 'supercrabtree.Forex'])
 ```
 
 ## License
-[MIT License](http://opensource.org/licenses/MIT)
+[MIT License](http://opensource.org/licenses/MIT)  
