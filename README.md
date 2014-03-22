@@ -1,5 +1,13 @@
 # Angular Forex
-Based on the currency filter in Angular. It allows more customisation of the output format and also converts the currencies using the Yahoo finance API.
+Based on the built-in currency filter in Angular, but with highly customisable output to allow for different currency types. e.g.
+$1,000.00  
+-$1,000.00  
+¥1000  
+1.000,00 €
+
+### [Demo is here](http://supercrabtree.github.io/angular-forex)
+
+Angular Forex will also convert your currencies for you using the Yahoo Finance API, **non-commercial use only,** please read the terms of service [here](http://info.yahoo.com/guidelines/us/yahoo/ydn/ydn-3955.html)
 
 ## Installation
 
@@ -9,16 +17,19 @@ Install to your project using [bower](http://bower.io/)
 bower install angular-forex
 ```
 
-Include the script in your html.
+Include the script in your html
 
 ```html
-<script src="bower_components/angular-forex/forex.min.js"></script>
+<script src="bower_components/angular-forex/angular-forex.js"></script>
 ```
 
 
 ## Usage
 
-Include the module in `controllers/app.js`, providing a base currency and settings for each currency you wish to use.
+Include the module `supercrabtree.Forex` as a dependency in your app.  
+In the `config` function of the app add a base currency, an then any other currencies you want to use.  
+Available parameters are: (currencyCode, currencySymbol, decimalAccuracy, decimalMarker, thousandsMarker and symbolAfterValue);  
+A full list of available currency codes [here](http://au.finance.yahoo.com/currencies/converter/) (click the browse all dropdown)
 
 ```javascript
 angular.module('myApp', 'supercrabtree.Forex'])
@@ -32,6 +43,16 @@ angular.module('myApp', 'supercrabtree.Forex'])
       .addCurrency('EUR', '€', 2, ',', '.', true);
   })
 ```
+You can now use the `forex` filter across you application. It will display in the format defined your base currency.
+```javascript
+{{ value | forex }}
+```
+To change the currency just inject the `Forex` service into your controller and set the currency currency using one of the currency codes.
+```javascript
+angular.app()
+```
 
 ## License
 [MIT License](http://opensource.org/licenses/MIT)
+
+Pull requests welcome!
