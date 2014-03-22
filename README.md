@@ -49,9 +49,22 @@ You can now use the `forex` filter across you application. It will display in th
 ```
 To change the currency just inject the `Forex` service into your controller and set the currency currency using one of the currency codes.
 ```javascript
-angular.app()
+angular.module('myApp')
+  .controller('myCtrl', function (Forex) {
+    Forex.setCurrency('JPY');
+  });
 ```
-
+Or you can set the filter on a one time basis by passing a it a parameter
+```javascript
+{{ value | forex:'JPY' }}
+```
+All of the currency codes that you added are availible as an array of strings, useful for dropdowns etc.
+```javascript
+angular.module('myApp')
+  .controller('myCtrl', function (Forex) {
+    Forex.currencyCodes;
+  });
+```
 ## License
 [MIT License](http://opensource.org/licenses/MIT)
 
