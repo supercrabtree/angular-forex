@@ -125,7 +125,7 @@ angular.module('supercrabtree.Forex', [])
           return input;
         }
       } else {
-        currency = Forex.currencies.current
+        currency = Forex.currencies.current;
       }
 
       var output = input;
