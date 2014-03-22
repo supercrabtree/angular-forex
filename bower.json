@@ -1,0 +1,22 @@
+{
+  "name": "angular-forex",
+  "version": "0.0.1",
+  "authors": [
+    "g-crabtree <supercrabtree@googlemail.com>"
+  ],
+  "description": "A currency converter for AngularJS, similar to the built-in currency filter except it will convert for you and has a provider for greater flexibility in the output format.",
+  "main": "./angular-forex.min.js",
+  "dependencies": {
+    "angular": ">=1.2.0"
+  },
+  "keywords": [
+    "forex",
+    "angularjs",
+    "angular",
+    "currency",
+    "converter",
+    "fx"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/supercrabtree/angular-forex"
+}
