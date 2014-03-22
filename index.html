@@ -1,1 +1,46 @@
-hiya
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Forex Demo</title>
+  <script>console.log(location.host)</script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <script src="angular-forex.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="MainCtrl">
+
+  <p>Play with this number</p>
+  <input type="number" step="any" ng-model="number">
+  <select ng-model="selectedCurrency" ng-options="i for i in currencyCodes.all"></select>
+  <h5>{{ number | forex}}</h5>
+
+  <h3>Or change all at once</h3>
+  <h5>EUR = {{number | forex:'EUR'}}</h5>
+  <h5>JPY = {{number | forex:'JPY'}}</h5>
+  <h5>AUD = {{number | forex:'AUD'}}</h5>
+  <h5>GBP = {{number | forex:'GBP'}}</h5>
+
+  <script>
+    angular.module('myApp', ['supercrabtree.Forex'])
+      .config(function (ForexProvider) {
+        ForexProvider
+          .addBaseCurrency('USD', '$')
+          .addCurrency('GBP', '£')
+          .addCurrency('JPY', '¥', 0)
+          .addCurrency('AUD', '$')
+          .addCurrency('EUR', '€', 2, ',', '.', true);
+      })
+      .controller('MainCtrl', function ($scope, Forex) {
+        $scope.number = 100;
+        $scope.selectedCurrency = "USD";
+        $scope.currencyCodes = Forex.currencyCodes;
+
+        $scope.$watch('selectedCurrency', function (newValue, oldValue) {
+          if (!oldValue) return;
+          Forex.setCurrency(newValue);
+        });
+      });
+  </script>
+</body>
+</html>
