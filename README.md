@@ -62,7 +62,7 @@ All of the currency codes that you added are availible as an array of strings, u
 ```javascript
 angular.module('myApp')
   .controller('myCtrl', function (Forex) {
-    Forex.currencyCodes;
+    Forex.currencyCodes.all;
   });
 ```
 ## License
