@@ -1,15 +1,14 @@
-# Angular Forex
-![logo](http://i59.tinypic.com/sywoyr.jpg)  
+# Angular Forex - [Demo is here](http://supercrabtree.github.io/angular-forex)
+![logo](http://i59.tinypic.com/sywoyr.jpg)
 
 Based on the built-in currency filter in Angular, but with highly customisable output to allow for different currency types. e.g.
-$1,000.00  
--$1,000.00  
-¥1000  
+$1,000.00
+-$1,000.00
+¥1000
 1.000,00 €
 
-Angular Forex will also convert your currencies for you using the Yahoo Finance API, **non-commercial use only,** please read the terms of service [here](http://info.yahoo.com/guidelines/us/yahoo/ydn/ydn-3955.html)  
+Angular Forex will also convert your currencies for you using the Yahoo Finance API, **non-commercial use only,** please read the terms of service [here](http://info.yahoo.com/guidelines/us/yahoo/ydn/ydn-3955.html)
 **1.1k minified and gzipped**
-### [Demo is here](http://supercrabtree.github.io/angular-forex)
 
 
 ## Installation
@@ -29,9 +28,9 @@ Include the script in your html
 
 ## Usage
 
-Include the module `supercrabtree.Forex` as a dependency in your app.  
-In the `config` function of the app add a base currency, an then any other currencies you want to use.  
-Available parameters are: (currencyCode, currencySymbol, decimalAccuracy, decimalMarker, thousandsMarker and symbolAfterValue);  
+Include the module `supercrabtree.Forex` as a dependency in your app.
+In the `config` function of the app add a base currency, an then any other currencies you want to use.
+Available parameters are: (currencyCode, currencySymbol, decimalAccuracy, decimalMarker, thousandsMarker and symbolAfterValue);
 A full list of available currency codes [here](http://au.finance.yahoo.com/currencies/converter/) (click the browse all dropdown)
 
 ```javascript
