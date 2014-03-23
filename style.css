@@ -1,0 +1,171 @@
+/* Colors
+==================================================
+http://www.colourlovers.com/palette/692245/Lunaria_~_Honesty
+
+Emerald Forests     = 034513
+Silver Eucalyptus   = E0E8E3
+Stems               = 9B8B6B
+Silver Dollar Plant = B5B296
+Eucalyptus Cinerea  = F6F8F4
+
+*/
+
+
+/* Base
+================================================== */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #F6F8F4;
+}
+
+body {
+  font: 14px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 2;
+  padding: 0;
+  margin: 0;
+  color: #222;
+}
+
+/* Wrap
+================================================== */
+
+.wrap {
+  padding: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Content
+================================================== */
+form {
+  width: 200px;
+}
+input {
+  margin-bottom: 0.3em;
+}
+input,
+select {
+  width: 100%;
+}
+.example-wrap {
+  position: relative;
+  margin: 50px auto 0 auto;
+  width: 420px;
+}
+.num {
+  position: absolute;
+  left: -50px;
+  top: 40px;
+  color: #F6F8F4;
+  background-color: #034513;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 25px;
+  text-align: center;
+}
+[id^="example"] {
+  position: relative;
+  padding: 30px;
+  background-color: #E0E8E3;
+  border-radius: 3px;
+  width: 480px;
+}
+[id^="example"] form {
+
+}
+[id^="example"] span {
+  position: absolute;
+  top: 12px;
+  right: 30px;
+  font-size: 50px;
+  color: #034513;
+}
+
+/* Hero
+================================================== */
+
+#hero {
+  background: #E0E8E3;
+  line-height: 1.2;
+  color: #9B8B6B;
+  padding-bottom: 10px;
+}
+
+#hero .wrap {
+  position: relative;
+}
+
+#hero .brand {
+  text-align: center;
+}
+
+#hero h1 {
+  display: inline-block;
+  font-size: 66px;
+  margin: 0;
+  line-height: 80px;
+  color: #034513;
+}
+
+#hero h1,
+#hero h3 {
+  letter-spacing: -0.04em;
+}
+
+#hero .logo {
+  display: inline-block;
+  width: 320px;
+  vertical-align: bottom;
+}
+
+#hero h3 {
+  margin: 0 0  10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#hero .tagline {
+  font-size: 22px;
+}
+
+/* Media Queries
+================================================== */
+
+/* tablet-ish */
+@media only screen and (min-width: 670px) {
+
+  #hero {
+    padding: 30px 0;
+  }
+
+  #hero .wrap {
+    padding-left: 360px;
+    width: 560px;
+  }
+
+  #hero .logo {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    width: 340px;
+  }
+
+  #hero .brand,
+  #hero h3 {
+    text-align: left;
+  }
+
+  #hero .button {
+    display: inline-block;
+    clear: both;
+  }
+}

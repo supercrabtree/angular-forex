@@ -3,14 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Angular Forex Demo</title>
-  <script>console.log(location.host)</script>
+  <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.4.2/pure-min.css">
+  <link rel="stylesheet" href="style.css">
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
   <script src="angular-forex.js"></script>
 </head>
 
 <body ng-app="myApp" ng-controller="MainCtrl">
 
-  <p>Play with this number</p>
+  <div id="hero">
+    <div class="wrap">
+      <div class="brand">
+        <img src="http://i59.tinypic.com/sywoyr.jpg" class="logo" alt="Angular-Forex logo">
+        <h1>Angular Forex</h1>
+      </div>
+      <h3 class="tagline">A configurable currency converter filter for AngularJS</h3>
+    </div>
+  </div>
+
+
+  <div class="example-wrap">
+    <div id="example-1">
+      <form class="pure-form">
+        <input type="number" step="any" ng-model="number">
+        <select ng-model="selectedCurrency" ng-options="i for i in currencyCodes.all"></select>
+      </form>
+      <span>{{number | forex}}</span>
+    </div>
+    <div class="num">1</div>
+  </div>
+
+
+
+  <!-- <p>Play with this number</p>
   <input type="number" step="any" ng-model="number">
   <select ng-model="selectedCurrency" ng-options="i for i in currencyCodes.all"></select>
   <h5>{{ number | forex}}</h5>
@@ -19,7 +44,7 @@
   <h5>EUR = {{number | forex:'EUR'}}</h5>
   <h5>JPY = {{number | forex:'JPY'}}</h5>
   <h5>AUD = {{number | forex:'AUD'}}</h5>
-  <h5>GBP = {{number | forex:'GBP'}}</h5>
+  <h5>GBP = {{number | forex:'GBP'}}</h5> -->
 
   <script>
     angular.module('myApp', ['supercrabtree.Forex'])
