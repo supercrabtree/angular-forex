@@ -23,6 +23,7 @@
     "money",
     "exchange"
   ],
+  "ignore": [".gitignore"],
   "license": "MIT",
   "homepage": "https://github.com/supercrabtree/angular-forex",
   "repository": {
