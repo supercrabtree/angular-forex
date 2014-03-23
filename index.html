@@ -23,28 +23,44 @@
 
 
   <div class="example-wrap">
+    <div class="num">1</div>
     <div id="example-1">
       <form class="pure-form">
         <input type="number" step="any" ng-model="number">
-        <select ng-model="selectedCurrency" ng-options="i for i in currencyCodes.all"></select>
+        <select ng-model="selectedCurrency" ng-options="i for i in currencyCodes.all" ng-change="onChange()"></select>
       </form>
       <span>{{number | forex}}</span>
     </div>
-    <div class="num">1</div>
   </div>
 
+  <div class="example-wrap">
+    <div class="num">2</div>
+    <div id="example-2">
+      <form class="pure-form">
+        <input type="number" step="any" ng-model="number2">
+        <select ng-model="selectedCurrency2" ng-options="i for i in currencyCodes.all"></select>
+      </form>
+      <svg class="arrows" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="50" height="50" viewBox="0" enable-background="new 0 0 50 50" xml:space="preserve"><path fill="#034513" d="M0 15.6h37.5V25L50 12.5 37.5 0v9.4H0M43.8 34.4H12.5V25L0 37.5 12.5 50v-9.4H50v-5.7 -0.5H43.8z"/></svg>
+      <form class="pure-form form2">
+        <input type="number" step="any" ng-model="number3">
+        <select ng-model="selectedCurrency3" ng-options="i for i in currencyCodes.all"></select>
+      </form>
+    </div>
+  </div>
 
+  <div class="example-wrap">
+    <div class="num-3">3</div>
+    <div id="example-3">
+      <form class="pure-form">
+        <span>$</span><input type="number" step="any" ng-model="number4">
+      </form>
+      <div>{{number4 | forex:'USD'}}</div>
+      <div>{{number4 | forex:'GBP'}}</div>
+      <div>{{number4 | forex:'JPY'}}</div>
+      <div>{{number4 | forex:'EUR'}}</div>
+    </div>
+  </div>
 
-  <!-- <p>Play with this number</p>
-  <input type="number" step="any" ng-model="number">
-  <select ng-model="selectedCurrency" ng-options="i for i in currencyCodes.all"></select>
-  <h5>{{ number | forex}}</h5>
-
-  <h3>Or change all at once</h3>
-  <h5>EUR = {{number | forex:'EUR'}}</h5>
-  <h5>JPY = {{number | forex:'JPY'}}</h5>
-  <h5>AUD = {{number | forex:'AUD'}}</h5>
-  <h5>GBP = {{number | forex:'GBP'}}</h5> -->
 
   <script>
     angular.module('myApp', ['supercrabtree.Forex'])
@@ -57,6 +73,7 @@
           .addCurrency('EUR', '€', 2, ',', '.', true);
       })
       .controller('MainCtrl', function ($scope, Forex) {
+        // example 1
         $scope.number = 100;
         $scope.selectedCurrency = "USD";
         $scope.currencyCodes = Forex.currencyCodes;
@@ -65,6 +82,17 @@
           if (!oldValue) return;
           Forex.setCurrency(newValue);
         });
+
+        // example 2
+        $scope.number2 = 100;
+        $scope.selectedCurrency2 = 'USD';
+
+        $scope.number3 = 100;
+        $scope.selectedCurrency3 = 'USD';
+
+        // example 3
+        $scope.number4 = 100
+
       });
   </script>
 </body>
