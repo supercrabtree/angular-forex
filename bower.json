@@ -1,6 +1,6 @@
 {
   "name": "angular-forex",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "George Crabtree <supercrabtree@googlemail.com>"
   ],
@@ -19,7 +19,8 @@
     "fx",
     "filter",
     "service",
-    "provider"
+    "provider",
+    "money"
   ],
   "license": "MIT",
   "homepage": "https://github.com/supercrabtree/angular-forex",
