@@ -27,7 +27,7 @@
     <div id="example-1">
       <form class="pure-form">
         <input type="number" step="any" ng-model="example1.number">
-        <select ng-model="example.1selectedCurrency" ng-options="i for i in currencyCodes.all"></select>
+        <select ng-model="example1.selectedCurrency" ng-options="i for i in currencyCodes.all"></select>
       </form>
       <span>{{example1.number | forex}}</span>
     </div>
@@ -79,7 +79,7 @@
         // example 1
         $scope.example1 = {
           number: 100,
-          selectedCurrency: "USD"
+          selectedCurrency: 'USD'
         }
         $scope.$watch('example1.selectedCurrency', function (newValue, oldValue) {
           if (!oldValue) return;
