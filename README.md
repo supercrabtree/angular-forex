@@ -1,4 +1,6 @@
 # Angular Forex
+![logo](http://i59.tinypic.com/sywoyr.jpg)  
+
 Based on the built-in currency filter in Angular, but with highly customisable output to allow for different currency types. e.g.
 $1,000.00  
 -$1,000.00  
