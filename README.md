@@ -7,9 +7,10 @@ $1,000.00
 ¥1000  
 1.000,00 €
 
+Angular Forex will also convert your currencies for you using the Yahoo Finance API, **non-commercial use only,** please read the terms of service [here](http://info.yahoo.com/guidelines/us/yahoo/ydn/ydn-3955.html)  
+**1.1k minified and gzipped**
 ### [Demo is here](http://supercrabtree.github.io/angular-forex)
 
-Angular Forex will also convert your currencies for you using the Yahoo Finance API, **non-commercial use only,** please read the terms of service [here](http://info.yahoo.com/guidelines/us/yahoo/ydn/ydn-3955.html)
 
 ## Installation
 
