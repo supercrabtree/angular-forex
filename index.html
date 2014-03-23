@@ -79,7 +79,7 @@
         // example 1
         $scope.example1 = {
           number: 100,
-          selectedCurrency = "USD";
+          selectedCurrency: "USD"
         }
         $scope.$watch('example1.selectedCurrency', function (newValue, oldValue) {
           if (!oldValue) return;
