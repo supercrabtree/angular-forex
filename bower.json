@@ -20,7 +20,8 @@
     "filter",
     "service",
     "provider",
-    "money"
+    "money",
+    "exchange"
   ],
   "license": "MIT",
   "homepage": "https://github.com/supercrabtree/angular-forex",
